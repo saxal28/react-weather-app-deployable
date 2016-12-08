@@ -30,22 +30,32 @@ class WeatherBox extends React.Component {
 			coordinates: ""
 		}
 	}
-	// componentWillMount() {
-	// 	const ojb = this;
-	// 	navigator.geolocation.getCurrentPosition(function(position) {
-  // 		console.log(position.coords.latitude, position.coords.longitude);
-	// 		let coords =  position.coords.latitude + "," + position.coords.longitude;
-	// 		ojb.setState({coordinates: coords})
-	// 		console.log("cordinates:" + ojb.state.coordinates)
-	// 	});
-	// }
+	componentWillMount() {
+		const ojb = this;
+	
+	}
 	componentDidMount() {
-		var ojb = this;
-		var link = "https://api.wunderground.com/api/e9f795d54303e612/conditions/q/" + "62220" + ".json";
-
 		//set background color;
-		document.body.style = 'background:url(http://i.imgur.com/2KUoLff.gif); background-size:cover'
+		// document.body.style = 'background:url(http://i.imgur.com/2KUoLff.gif); background-size:cover';
+		document.body.style = "background:url(http://i.imgur.com/B7NdGJo.jpg); background-size:cover; background-attachment: fixed"
+		
+		// saves WeatherBox as a global object
+		var ojb = this;
+		
+		//gets gps coordinates
+			navigator.geolocation.getCurrentPosition(function(position) {
+   				console.log(position.coords.latitude, position.coords.longitude);
+				let coords =  position.coords.latitude + "," + position.coords.longitude;
+				ojb.setState({coordinates: coords})
+				console.log("cordinates:" + ojb.state.coordinates)
+			});
+		
+		//sets timeout so the coordinate state can render and we can call it in link
+		setTimeout(function() {
 
+		var link = "https://api.wunderground.com/api/e9f795d54303e612/conditions/q/" + ojb.state.coordinates + ".json";
+
+		//ajax call to get weather data
 			$.ajax({
 							url: link,
 							type: 'GET',
@@ -63,8 +73,13 @@ class WeatherBox extends React.Component {
 									let humidity = data.current_observation.relative_humidity;
 									this.setState({full_location: current_location, temp:temp, condition:condition, humidity: humidity});
 							}
-					});
-	 };
+		
+		//end timeout function
+		});
+		}, 500);
+	 }
+	 
+	 
 
 	handleZipChange(e) {
 		if (this.state.search.length >= 4) {
@@ -72,9 +87,7 @@ class WeatherBox extends React.Component {
 				var zipcode = $("#search-input").val();
 				console.log(this.state.seach)
 				var link = "https://api.wunderground.com/api/e9f795d54303e612/conditions/q/" + zipcode + ".json";
-				// var full_location;
-				// var temp;
-				//========================================================================================================================
+
         // THIS GETS THE WEAHER INFO FROM API;
 				$.ajax({
 								url: link,
@@ -112,7 +125,8 @@ class WeatherBox extends React.Component {
 		"Overcast": "http://image.flaticon.com/icons/svg/53/53934.svg",
 		"Scattered Clouds": "http://image.flaticon.com/icons/svg/53/53934.svg",
 		"Chance of Rain": "http://www.mikeafford.com/store/store-images/ms01b_example_heavy_rain_showers.png",
-		"Light Snow": "https://cdn4.iconfinder.com/data/icons/weathercons/64/snow-512.png"
+		"Light Snow": "https://cdn4.iconfinder.com/data/icons/weathercons/64/snow-512.png",
+		"Snow": "http://i.imgur.com/RAVaruD.png"
 
 	}
 		return (
