@@ -1,0 +1,89 @@
+body {
+	font-family: Raleway;
+}
+
+#search-container {
+	text-align:center;
+	margin-top:30px;
+	margin-bottom:30px;
+	padding:10px;
+
+}
+
+.icon {
+	width:55px;
+	height:55px;
+}
+
+.well {
+	color:black;
+	background-color:rgba(255,255,255,0.5);
+	border: 2px solid #333;
+	/*border-radius:10px;*/
+	box-shadow: 10px 10px 5px #333;
+}
+
+.well h1 {
+	color:black;
+	font-size:1.7em;
+	font-family: Russo One;
+}
+
+h1 {
+	font-family:Russo One;
+}
+
+#search-input{
+	width:50%;
+	min-width:300px;
+	margin:30px auto;
+	background:rgba(255,255,255,0.5);
+	/*border-radius:10px;*/
+	text-align:center;
+	border:2px solid #333;
+	font-size:1.75em;
+	padding-top:20px;
+	padding-bottom:20px;
+	color:black;
+}
+
+btn btn.danger {
+	height:10px;
+}
+
+.container {
+	margin-top:3%;
+	color:black;
+}
+
+/*.temperature {
+	color: white;
+	font-family: Russo One;
+	font-size:1.5em;
+	background:blue;
+	padding:15px;
+}
+
+.h3_temperature {
+	margin-bottom: 36px
+}
+
+.hi_lo {
+	color: white;
+	font-family: Russo One;
+	font-size:1.5em;
+	background:orange;
+	padding:15px;
+}
+
+.conditions {
+	color: white;
+	font-family: Russo One;
+	font-size:1.5em;
+	background:red;
+	padding:15px;
+}*/
+
+.f {
+	padding:10px;
+}
