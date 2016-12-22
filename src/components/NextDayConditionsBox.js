@@ -6,15 +6,15 @@ export default class NextDayConditionsBox extends React.Component{
 		super(props);
 		this.state = {
 			//state for next day weather
-			day1_day: "Dickbutt",
+			day1_day: "",
 			day1_temp_high: 0,
 			day1_temp_low:  0,
-			day1_conditions: "It is nothing.",
+			day1_conditions: "",
 			//state for the day after next weather
-			day2_day: "Alan's B-Day",
+			day2_day: "",
 			day2_temp_high: 100,
 			day2_temp_low:  5,
-			day2_conditions: "HURRICANE"
+			day2_conditions: ""
 		}
 	}
 
