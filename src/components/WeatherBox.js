@@ -85,7 +85,7 @@ export default class WeatherBox extends React.Component {
 				.catch(function(err) {
 					console.log(url)
 				})
-		}, 500)
+		}, 600)
 	}
 
 	componentWillMount() {
