@@ -1,19 +1,23 @@
-//========================
-//   WEATHER INPUT
-//  gets zipcode input
-//========================
+import React, { Component } from 'react';
 
-import React from "react"
+export default class WeatherInput extends Component{
+  render() {
+    const lat = this.props.lat ? this.props.lat : "...";
+    const lon = this.props.lon ? this.props.lon : "...";
+    return (
+      <section>
+        <select className="weather-select">
+          <option>Current Location</option>
+          <option>Boston</option>
+          <option>New York</option>
+        </select>
+      </section>
+    )
+  }
+}
 
-export default class WeatherInput extends React.Component {
-	render() {
-		return (
-			<div id="search-container  pagination-centered">
-				<div>
-					<input type="text" className="form-control" placeholder="enter 5-digit zip code" id="search-input"
-						onChange={ this.props.change } />
-				</div>
-			</div>
-		)
-	}
+const cities = {
+  "Current Location": {"lat": 15, "lon": -50},
+  "Boston": {"lat": 42.361145, "lon": -71.057083},
+  "New York": {"lat": 40.785091, "lon":  -73.968285}
 }
