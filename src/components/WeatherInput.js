@@ -4,18 +4,21 @@ export default class WeatherInput extends Component{
   render() {
     return (
       <section>
-        <select className="weather-select">
+        <select className="weather-select" onChange={this.props.onChange}>
           <option>Current Location</option>
+          <option>Anchorage</option>
           <option>Boston</option>
+          <option>Chicago</option>
+          <option>Dallas</option>
+          <option>Honolulu</option>
+          <option>Miami</option>
           <option>New York</option>
+          <option>New Orleans</option>
+          <option>Phoenix</option>
+          <option>Saint Louis</option>
+          <option>San Francisco</option>
         </select>
       </section>
     )
   }
-}
-
-const cities = {
-  "Current Location": {"lat": 15, "lon": -50},
-  "Boston": {"lat": 42.361145, "lon": -71.057083},
-  "New York": {"lat": 40.785091, "lon":  -73.968285}
 }

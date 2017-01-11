@@ -3,8 +3,9 @@ import axios from 'axios';
 
 var icons = {
   "Clear": "https://image.flaticon.com/icons/svg/53/53565.svg",
-  "Partly Cloudy": "https://downloadicons.net/sites/default/files/partly-cloudy-day-icon-61624.png",
+  "Partly Cloudy": "https://d30y9cdsu7xlg0.cloudfront.net/png/17769-200.png",
   "Rain": "https://image.flaticon.com/icons/svg/54/54456.svg",
+  "Light Rain": "https://maxcdn.icons8.com/Share/icon/Weather//light_rain_21600.png",
   "Mostly Cloudy": "https://image.flaticon.com/icons/svg/53/53934.svg",
   "Overcast": "https://maxcdn.icons8.com/Share/icon/Weather//clouds1600.png",
   "Scattered Clouds": "https://image.flaticon.com/icons/svg/53/53934.svg",
@@ -57,27 +58,31 @@ export default class ForecastsBox extends Component {
     this.getForecast();
   }
 
+  componentWillReceiveProps() {
+    this.getForecast();
+  }
+
   render() {
     return (
       <div className="row" style={{marginBottom:70}}>
         <div className="col-sm-4 forecast-1">
           <h2 className="">{this.state.day[0]}</h2>
-          <h2>{this.state.hi[0]} Hi</h2>
-          <h2>{this.state.low[0]} Lo</h2>
+          <h2>{this.state.hi[0]} <span style={{fontSize:"20px"}}>Hi</span></h2>
+          <h2>{this.state.low[0]} <span style={{fontSize:"20px"}}>Lo</span></h2>
           <h3>{this.state.conditions[0]}</h3>
           <img role="presentation" src={icons[this.state.conditions[0]]} className="icon" />
         </div>
         <div className="col-sm-4 forecast-1">
           <h2>{this.state.day[1]}</h2>
-          <h2>{this.state.hi[1]} Hi</h2>
-          <h2>{this.state.low[1]} Lo</h2>
+          <h2>{this.state.hi[1]} <span style={{fontSize:"20px"}}>Hi</span></h2>
+          <h2>{this.state.low[1]} <span style={{fontSize:"20px"}}>Lo</span></h2>
           <h3>{this.state.conditions[1]}</h3>
           <img role="presentation" src={icons[this.state.conditions[1]]} className="icon" />
         </div>
         <div className="col-sm-4 forecast-1">
           <h2>{this.state.day[2]}</h2>
-          <h2>{this.state.hi[2]} Hi</h2>
-          <h2>{this.state.low[2]} Lo</h2>
+          <h2>{this.state.hi[2]} <span style={{fontSize:"20px"}}>Hi</span></h2>
+          <h2>{this.state.low[2]} <span style={{fontSize:"20px"}}>Lo</span></h2>
           <h3>{this.state.conditions[2]}</h3>
           <img role="presentation" src={icons[this.state.conditions[2]]} className="icon" />
         </div>
