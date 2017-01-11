@@ -12,6 +12,7 @@ var icons = {
   "Chance of Rain": "https://www.mikeafford.com/store/store-images/ms01b_example_heavy_rain_showers.png",
   "Light Snow": "https://cdn4.iconfinder.com/data/icons/weathercons/64/snow-512.png",
   "Snow": "https://i.imgur.com/RAVaruD.png",
+  "Snow Showers": "https://i.imgur.com/RAVaruD.png",
   "Ice Pellets": "https://d30y9cdsu7xlg0.cloudfront.net/png/9799-200.png"
 }
 
