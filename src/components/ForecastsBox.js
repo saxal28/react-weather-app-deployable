@@ -1,7 +1,20 @@
 import React, { Component } from "react";
 import axios from 'axios';
 
-export default class ForecastsBox extends React.Component {
+var icons = {
+  "Clear": "https://image.flaticon.com/icons/svg/53/53565.svg",
+  "Partly Cloudy": "https://downloadicons.net/sites/default/files/partly-cloudy-day-icon-61624.png",
+  "Rain": "https://image.flaticon.com/icons/svg/54/54456.svg",
+  "Mostly Cloudy": "https://image.flaticon.com/icons/svg/53/53934.svg",
+  "Overcast": "https://maxcdn.icons8.com/Share/icon/Weather//clouds1600.png",
+  "Scattered Clouds": "https://image.flaticon.com/icons/svg/53/53934.svg",
+  "Chance of Rain": "https://www.mikeafford.com/store/store-images/ms01b_example_heavy_rain_showers.png",
+  "Light Snow": "https://cdn4.iconfinder.com/data/icons/weathercons/64/snow-512.png",
+  "Snow": "https://i.imgur.com/RAVaruD.png",
+  "Ice Pellets": "https://d30y9cdsu7xlg0.cloudfront.net/png/9799-200.png"
+}
+
+export default class ForecastsBox extends Component {
 
   constructor(props) {
     super(props)
@@ -20,7 +33,6 @@ export default class ForecastsBox extends React.Component {
       const API_KEY = "e9f795d54303e612";
       const lat = that.props.lat;
       const lon = that.props.lon;
-      let forecast1 = [];
       const url = `https://api.wunderground.com/api/${API_KEY}/forecast10day/q/${lat},${lon}.json`;
       axios.get(url)
         .then(function(response) {
@@ -35,7 +47,6 @@ export default class ForecastsBox extends React.Component {
             low.push(data[i].low.fahrenheit);
             conditions.push(data[i].conditions);
           }
-          console.log(day, high, low, conditions);
           that.setState({ day, hi:high, low, conditions });
       })
     }, 600)
@@ -73,17 +84,4 @@ export default class ForecastsBox extends React.Component {
       </div>
     )
   }
-}
-
-var icons = {
-  "Clear": "https://cdn1.iconfinder.com/data/icons/linear-weather-icons/100/meteo_sunny-512.png",
-  "Partly Cloudy": "http://downloadicons.net/sites/default/files/partly-cloudy-day-icon-61624.png",
-  "Rain": "http://www.iconsfind.com/wp-content/uploads/2016/07/20160725_5795bcd95bf60.png",
-  "Mostly Cloudy": "http://image.flaticon.com/icons/svg/53/53934.svg",
-  "Overcast": "http://image.flaticon.com/icons/svg/53/53934.svg",
-  "Scattered Clouds": "http://image.flaticon.com/icons/svg/53/53934.svg",
-  "Chance of Rain": "http://www.mikeafford.com/store/store-images/ms01b_example_heavy_rain_showers.png",
-  "Light Snow": "https://cdn4.iconfinder.com/data/icons/weathercons/64/snow-512.png",
-  "Snow": "http://i.imgur.com/RAVaruD.png",
-  "Ice Pellets": "https://d30y9cdsu7xlg0.cloudfront.net/png/9799-200.png"
 }

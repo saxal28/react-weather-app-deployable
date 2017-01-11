@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 export default class WeatherInput extends Component{
   render() {
-    const lat = this.props.lat ? this.props.lat : "...";
-    const lon = this.props.lon ? this.props.lon : "...";
     return (
       <section>
         <select className="weather-select">
