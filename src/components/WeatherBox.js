@@ -3,6 +3,9 @@ import axios from 'axios';
 
 import WeatherInput from "./WeatherInput";
 import ForecastsBox from "./ForecastsBox";
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+// import "../styles/weatherIcons/weather-icons.min.css";
+
 
 var icons = {
   "Clear": "https://image.flaticon.com/icons/svg/53/53565.svg",
@@ -76,12 +79,17 @@ export default class WeatherBox extends React.Component {
 					const temp = data.temp_f;
 					const weather = data.weather;
 					const location = data.display_location.full;
+          const weatherResponseObject = {
+            temp,
+            weather,
+            location
+          }
 					that.setState({
 						temp,
 						weather,
 						location
 					})
-
+          console.log(weatherResponseObject)
 				})
 				.catch(function(err) {
 					console.log(url)
@@ -90,9 +98,8 @@ export default class WeatherBox extends React.Component {
 	}
 
 	componentWillMount() {
-		this.getCoordinates();
-		this.getConditions();
-		// this.getForecast();
+		this.getCoordinates()
+    this.getConditions();
 	}
 
 	handleSelectChange() {
