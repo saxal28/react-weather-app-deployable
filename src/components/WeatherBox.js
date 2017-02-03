@@ -49,7 +49,7 @@ export default class WeatherBox extends React.Component {
 			lon: "",
 			temp: "95",
 			location: "St. Louis, MO",
-			weather: "Scattered Clouds",
+			weather: "Ice Pellets",
 			forecast: []
 		}
 	}
@@ -127,7 +127,7 @@ export default class WeatherBox extends React.Component {
 
 			<section>
 				{/*this will be the weather box*/}
-        {this.state.weather ? "" : <div className="alert alert-danger">API Key Disabled due to >12 calls in a minute. Whoops....adding defaults......</div>}
+        {this.state.weather === "95" && this.state.weather === "Ice Pellets" ? "" : <div className="alert alert-danger">API Key Disabled due to >12 calls in a minute. Whoops....adding defaults......</div>}
 
 				<div className="contain">
           <div className="col-md-4">
