@@ -64,26 +64,43 @@ export default class ForecastsBox extends Component {
   }
 
   render() {
+    const lowStyle = {
+      margin: 5,
+      padding:5,
+      fontSize: "25px",
+      background:"blue",
+      fontWeight:"bold",
+      boxShadow:"-1px 3px 2px black"
+    }
+
+    const highStyle = {
+      margin: 5,
+      fontSize: 25,
+      padding:5,
+      background:"red",
+      fontWeight:"bold",
+      boxShadow: "-1px 3px 2px black"
+    }
     return (
       <div className="row" style={{marginBottom:70}}>
-        <div className="col-sm-4 forecast-1">
-          <h2 className="">{this.state.day[0]}</h2>
-          <h2>{this.state.hi[0]} <span style={{fontSize:"20px"}}>Hi</span></h2>
-          <h2>{this.state.low[0]} <span style={{fontSize:"20px"}}>Lo</span></h2>
+        <div className="col-md-4 forecast-1">
+          <h1 className="">{this.state.day[0]}</h1>
+          <span style={highStyle}>{this.state.hi[0]}</span>
+          <span style={lowStyle}>{this.state.low[0]}</span>
           <h3>{this.state.conditions[0]}</h3>
           <img role="presentation" src={icons[this.state.conditions[0]]} className="icon" />
         </div>
-        <div className="col-sm-4 forecast-1">
-          <h2>{this.state.day[1]}</h2>
-          <h2>{this.state.hi[1]} <span style={{fontSize:"20px"}}>Hi</span></h2>
-          <h2>{this.state.low[1]} <span style={{fontSize:"20px"}}>Lo</span></h2>
+        <div className="col-md-4 forecast-1">
+          <h1>{this.state.day[1]}</h1>
+          <span style={highStyle}>{this.state.hi[1]}</span>
+          <span style={lowStyle}>{this.state.low[1]}</span>
           <h3>{this.state.conditions[1]}</h3>
           <img role="presentation" src={icons[this.state.conditions[1]]} className="icon" />
         </div>
-        <div className="col-sm-4 forecast-1">
-          <h2>{this.state.day[2]}</h2>
-          <h2>{this.state.hi[2]} <span style={{fontSize:"20px"}}>Hi</span></h2>
-          <h2>{this.state.low[2]} <span style={{fontSize:"20px"}}>Lo</span></h2>
+        <div className="col-md-4 forecast-1">
+          <h1>{this.state.day[2]}</h1>
+          <span style={highStyle}>{this.state.hi[2]}</span>
+          <span style={lowStyle}>{this.state.low[2]}</span>
           <h3>{this.state.conditions[2]}</h3>
           <img role="presentation" src={icons[this.state.conditions[2]]} className="icon" />
         </div>

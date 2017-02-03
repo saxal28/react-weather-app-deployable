@@ -125,25 +125,25 @@ export default class WeatherBox extends React.Component {
 
 		return (
 
-			<seciton>
+			<section>
 				{/*this will be the weather box*/}
 
-				<div className="banner">
-          <div className="weather-banner-box">
-            <h2>{this.state.location}</h2>
-            <h2>{this.state.temp}F</h2>
+				<div className="contain">
+          <div className="col-md-4">
+            <h1>{this.state.location}</h1>
+            <h1>{this.state.temp}F</h1>
             <img role="presentation" src={icons[this.state.weather]} className="icon" />
             <h2>{this.state.weather}</h2>
+              <WeatherInput
+  							lat={this.state.lat}
+                onChange={this.handleSelectChange.bind(this)}
+  							lon={this.state.lon}/>
           </div>
 
-				</div>
 
-				<div className="container text-center">
+
+				<div className="col-md-8">
 						<h1>{this.state.zipcode}</h1>
-						<WeatherInput
-							lat={this.state.lat}
-              onChange={this.handleSelectChange.bind(this)}
-							lon={this.state.lon}/>
 						<ForecastsBox
 							lat={this.state.lat}
 							lon={this.state.lon}
@@ -151,7 +151,9 @@ export default class WeatherBox extends React.Component {
 							weather={this.state.weather}/>
 				</div>
 
-			</seciton>
+        </div>
+
+			</section>
 		)
 	}
 }

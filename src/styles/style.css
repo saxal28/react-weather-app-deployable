@@ -1,28 +1,12 @@
 body {
-	font-family: 'Comfortaa', cursive;
+	font-family: 'Megrim', cursive;
 	color:white;
-	background:url("https://newevolutiondesigns.com/images/freebies/city-wallpaper-18.jpg");
+	/*background:url("http://i.imgur.com/RqkZEPG.jpg");*/
+	background:url("http://www.hdbloggers.net/wp-content/uploads/2016/10/Wallpaper-4K.jpg");
 	background-size:cover;
-}
-
-.banner h2 {
-	font-size:2.5em;
-	color:black;
-	font-family: 'Comfortaa', cursive;
-}
-
-h2 {
-	font-weight:bold;
-}
-
-h3 {
-	font-weight:bold;
-	font-size:1.5em;
-}
-
-h1 {
-  max-width:600px;
-  margin: 0 auto;
+	text-align: center;
+	font-weight: bold;
+	background-attachment: fixed;
 }
 
 img {
@@ -30,56 +14,46 @@ img {
   margin:0 auto;
 }
 
-.weather-select {
-  margin-top:10px;
-	margin-bottom:10px;
-  width: 280px;
-	padding:10px;
-	padding-left: 20px;
-	color:black;
+h1, h2, h3, h4, h5, span {
 	font-weight:bold;
-	font-size:25px;
-	border:none;
-	background: rgba(255,255,255,0.7);
-	box-shadow:0.2px 2px 20px lightgrey;
-	/*border:1px solid gray;*/
-  /*box-shadow:rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;*/
 }
 
-.banner {
-	background: rgba(255,255,255,0.7);
-	padding:50px;
-	margin-bottom: 20px;
-	box-shadow:0.2px 2px 20px lightgrey;
-	/*background: white;*/
-	/*background:url("https://upload.wikimedia.org/wikipedia/commons/f/ff/Panoramic_Boston.jpg");
-	background-size:cover;*/
-	width:100%;
-	height:100%;
-	color:#333;
-	text-align:center;
-	/*box-shadow:rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;*/
-	font-weight:bold;
+h1 {
+	font-size: 49px;
 }
+
+.weather-select {
+  width: 280px;
+	padding:10px;
+	padding-left: 20px;*/
+	color:white;
+	font-weight:bold;
+	font-size:27px;
+	border:none;
+	background: #333;
+}
+
+.contain {
+	padding-top : 150px;
+}
+
 
 .icon {
 	width: 90px;
 	height:90px;
 	margin:5px auto;
+	background:orange;
+	padding:9px;
+	color:white;
+	box-shadow: 2px 7px 30px black;
 }
 
 .forecast-1 {
-	background: rgba(255,255,255,0.7);
+	/*background: rgba(255,255,255,0.7);*/
 	/*box-shadow:rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;*/
 	/*border:1px solid white;*/
-	box-shadow:0.2px 2px 20px lightgrey;
+	/*box-shadow:0.2px 2px 20px lightgrey;*/
 	padding:20px;
 	margin: 0 auto;
-	margin-top:30px;
-	color:black;
-}
-
-.col-sm-4 {
-	width:32.4%;
-	margin:5px;
+	color:white;
 }
