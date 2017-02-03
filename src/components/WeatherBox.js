@@ -127,6 +127,7 @@ export default class WeatherBox extends React.Component {
 
 			<section>
 				{/*this will be the weather box*/}
+        {this.state.weather ? "" : <div className="alert alert-danger">API Key Disabled due to >12 calls in a minute. Whoops....</div>}
 
 				<div className="contain">
           <div className="col-md-4">

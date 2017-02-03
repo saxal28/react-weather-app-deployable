@@ -37,6 +37,10 @@ h1 {
 	padding-top : 150px;
 }
 
+.alert {
+	font-weight:bold;
+	font-family: "sans-serif";
+}
 
 .icon {
 	width: 90px;
