@@ -22,10 +22,10 @@ export default class ForecastsBox extends Component {
     super(props)
 
     this.state = {
-      day: [],
-      hi: [],
-      low: [],
-      conditions: []
+      day: ["Mon", "Tues", "Wed"],
+      hi: [45,23,24],
+      low: [12,32,12],
+      conditions: ["Ice Pellets", "Clear", "Overcast"]
     }
   }
 
